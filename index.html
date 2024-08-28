@@ -17,11 +17,16 @@
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
-				  <!-- Navigation Bar -->
-				  <nav id="nav">
-					<ul>
+				   <!-- Navigation Bar -->
+				   <nav id="nav">
+					<button class="nav-toggle" aria-label="Toggle navigation">
+						<span class="hamburger"></span>
+						<span class="hamburger"></span>
+						<span class="hamburger"></span>
+					</button>
+					<ul class="nav-menu">
 						<li><a href="#home" class="smooth-scroll">Home</a></li>
-						<li><a href="#education" class="smooth-scroll">Education</a>"</li>
+						<li><a href="#education" class="smooth-scroll">Education</a></li>
 						<li><a href="#skills" class="smooth-scroll">Skills</a></li>
 						<li><a href="#experience" class="smooth-scroll">Experience</a></li>
 						<li><a href="#projects" class="smooth-scroll">Projects</a></li>
@@ -460,14 +465,8 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-				// Smooth scroll for navigation links
-				document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
-					anchor.addEventListener('click', function (e) {
-						e.preventDefault();
-						document.querySelector(this.getAttribute('href')).scrollIntoView({
-							behavior: 'smooth'
-						});
-					});
+				document.querySelector('.nav-toggle').addEventListener('click', function() {
+					document.querySelector('.nav-menu').classList.toggle('active');
 				});
 			</script>
 

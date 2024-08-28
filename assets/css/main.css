@@ -8618,6 +8618,9 @@ input, select, textarea {
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #nav ul {
@@ -8645,6 +8648,21 @@ input, select, textarea {
     border-radius: 5px;
 }
 
+/* Hamburger Menu */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.nav-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
@@ -8653,6 +8671,24 @@ html {
 /* Additional Styles */
 body.is-preload {
     padding-top: 60px; /* Adjust based on the height of the nav bar */
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    #nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav ul.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
 }
 /* Home Section */
 #home {
