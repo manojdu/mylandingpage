@@ -8654,3 +8654,75 @@ html {
 body.is-preload {
     padding-top: 60px; /* Adjust based on the height of the nav bar */
 }
+/* Home Section */
+#home {
+    position: relative;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: left;
+}
+
+#home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Gradient overlay */
+}
+
+#home .content {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#home .major {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#home .actions {
+    margin-top: 20px;
+}
+
+/* Animations */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
